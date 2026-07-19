@@ -858,6 +858,13 @@ PRIJZEN = {
             "85mm": 7.2,
         },
     },
+   
+   "overig spul in winkel": {
+       "Rolmaten, mesjes etc": {
+       },
+      "Wielen": {
+      },
+   },
 
     "Verf": {
 
@@ -1099,6 +1106,7 @@ CATEGORIEEN = [
 
    {"naam": "Verf",      "sleutel": "Verf",      "type": "Verf"},
    {"naam": "Isolatie", "sleutel": "Isolatie", "type": "Isolatie"},
+   {"naam": "Overig spul in winkel", "sleutel": "Overig spul in winkel", "type": "ijzerwaren"},
 
 ]
 
