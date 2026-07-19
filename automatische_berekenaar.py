@@ -335,17 +335,23 @@ PRIJZEN = {
 
         },
 
-        "Moeren en Ringen": {
+        "(dop)/(oog)Moeren en Ringen": {
 
-            "M6": 0.0225,
-
-            "M8": 0.0415,
-
-            "M10": 0.083,
-
-            "M12": 0.18,
-
-            "M16": 0.3,
+            "M6 Moeren en Ringen": 0.0225,
+            "M6 Dopmoeren": 0.25,
+            "M6 Oogmoeren": 1,
+            "M8 Moeren en Ringen": 0.0415,
+            "M8 Dopmoeren": 0.30,
+            "M8 Oogmoeren": 1,
+            "M10 Moeren en Ringen": 0.083,
+            "M10 Dopmoeren": 0.63,
+            "M10 Oogmoeren": 1.5,
+            "M12 Moeren en Ringen": 0.18,
+            "M12 Dopmoeren": 0.78,
+            "M12 Oogmoeren": 1.5,
+            "M14 Oogmoeren": 2,
+            "M16 Moeren en Ringen": 0.3,
+            "M16 Oogmoeren": 2.25,
 
         },
 
@@ -439,22 +445,76 @@ PRIJZEN = {
 
         },
 
-        "Spijkers met platte kop": {
+        "Spijkers met platte kop per doos": {
 
             "1.0x15 300g": 3.75,
-
+            "1.2x20 400g": 3.75,
+            "1.5x25 425g": 3.75,
+            "1.8x30 470g": 3.75,
+            "2.0x35 600g": 3.75,
+            "2.0x40 700g": 3.75,
+            "2.7x50 725g": 3.75,
+            "2.7x60 750g": 3.75,
+            "3.5x80 750g": 3.75,
+            "4.0x100 750g": 3.75,
+            "boomspijkers 2,5kg": 10,
         },
 
-        "Spijkers met bolle kop": {
+        "Spijkers met bolle kop per doos": {
 
             "1.0x15 300g": 6.75,
+            "1.2x20 400g": 6.75,
+            "1.5x25 425g": 6.75,
+            "1.8x30 470g": 6.75,
+            "2.0x35 550g": 6.75,
+            "2.0x40 600g": 6.75,
+            "2.2x45 650g": 6.75,
+            "2.7x50 700g": 6.75,
+            "2.7x55 700g": 7.5,
+            "2.7x60 725g": 7.5,
+            "RVS 2.4x50 1kg": 35,
+        },
+
+        "Schalienagels per doos": {
+            "3.0x20 270g": 4,
+            "3.0x20 1kg": 7.5,
 
         },
 
-        "Schalienagels": {
+        "Blauw geharde Staalspijkers per doos": {
+            "2.0x20 200g": 4.5,
+            "2.4x30 200g": 4.5,
+            "3.0x40 375g": 4.5,
+            "3.0x50 375g": 4.5,
 
-            "3.0x20 1kg": 7.5,
+        },
 
+        "Krammen per doos": {
+            "1.8x15 200g": 4.75,
+            "2.0x20 260g": 3.75,
+            "2.7x25 325g": 3.75,
+            "3.0x30 350g": 4,
+            "3.5x35 350g": 4.75,
+            "1.8x15 1kg": 12.75,
+            "2.0x20 1kg": 12,
+            "2.7x25 1kg": 10,
+            "3.0x30 1kg": 9.75,
+            "4.0x40 1kg": 9.75,
+            "schroefnagel 3.8x32 200st": 8,
+            "schroefnagel 3.8x40 1000st": 20,
+        },
+
+        "Schietspijkers/nagels per doos": {
+            "Goldlook 30mm": 35,
+            "Goldlook 40mm": 42.5,
+            "Goldlook 50mm": 30,
+            "Afwerknagel 20mm": 11,
+            "Afwerknagel 40mm": 14.5,
+            "Afwerknagel 50mm": 17.5,
+        },
+
+        "Overige spijkers per doos": {
+            "draadnagels 5kg": 17.78,
         },
 
     },
