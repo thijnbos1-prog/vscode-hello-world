@@ -560,17 +560,38 @@ PRIJZEN = {
         },
 
         "Rolmaten, mesjes, hamers etc": {
-            "Rolmaten": { 
-               
-            },
-            "mesjes": {
+            "Rolmaten en duimstokken": { 
+                "Cosmos 3m": 8.25,
+                "Cosmos 5m": 11.25,
+                "Cosmos 8m": 14.5,
+                "Stanley 5m": 17.8,
+                "Stanley 8m": 25,
+                "Duimstok kunstof": 7.5,
+                "Duimstok hout": 14,
                
             },
             "hamers en bijlen": {
-
+                "Hamer cosmos": 12.5,
+                "Hamer 4tecx": 15,
             },
-            "bits": {
-
+            "zagen, mesjes, bits en potloden": {
+                "Handzaag Bahco": 12.5,
+                "Mesjes": 5,
+                "alle bits": 1,
+                "bitset klein": 15,
+                "bitset groot": 20,
+                "potlood": 1.5,
+            },
+            "Waterpas": {
+                "400mm": 16.5,
+                "600mm": 18.5,
+                "1000mm": 27.5,
+                "1800mm": 55,
+            },
+            "Lijmtang": {
+                "500x120mm staal": 55,
+                "600x120mm staal": 57.5,
+                "600x120mm gegoten kop": 42.5,
             },
 
         },
@@ -639,12 +660,30 @@ PRIJZEN = {
                 "8x460mm zeskant opname": 12.5,
             },
             "Slangenboor": {
+                "6x235mm": 10,
+                "8x235mm": 10,
+                "8x450mm": 14.5,
+                "10x235mm": 13,
+                "10x450mm": 20,
+                "12x235mm": 15,
+                "12x450mm": 20,
+                "14x235mm": 15,
+                "14x450mm": 22.5,
+                "16x235mm": 20,
 
             },
             "Overige boren": {
+                "speedboor set 6 tot 25mm 14st": 30,
+                "verzinkboor 3/4/5mm": 7.1,
+                "verzinkboor 13mm": 10,
+                "verzinkboor 16mm": 15,
+                "trespaboor": 3.5,
 
             },
-        }
+        }, 
+        "Wielen": {
+        },
+        
 
     },
 
@@ -841,8 +880,13 @@ PRIJZEN = {
         },
 
         "Wit": {
-
-            "2600x1200": {"9.5": 8.95, "12.5": 10.25},
+            "60x200": {"9,5": 5.47},
+            "60x260": {"9,5": 7.11, "12.5": 7.92},
+            "60x300": {"9,5": 8.21, "12,5": 9.14},
+            "60x360": {"9,5": 9.85, "12,5": 10.97},
+            "60x420": {"9,5": 11.49},
+            "120x260": {"12,5": 14.04},
+            "120x300": {"12,5": 16.2},
 
         },
 
@@ -853,9 +897,11 @@ PRIJZEN = {
     "Platen": {
 
         "Betonplex": {
-
-            "2500x1250": {"18": 42.50, "21": 49.90},
-
+            "125x250 zwart": {"4": 21.85, "6": 24.5, "10": 52.5, "10 as": 57.5, "12": 62.5, "12 as": 72.5, "15": 85, "15 as": 90, "18 B-Keus": 45, "18": 90, "18 as": 95, "21 as": 110},
+            "125x250 lichtbruin": {"7": 40, "9": 86.5, "12": 98.8, "15": 111.2, "18": 117.65},
+            "150x300 lichtbruin": {"12": 162.95, "15": 173.35, "18": 197.55},
+            "215x385 lichtbruin": {"18 as": 356},
+            "215x400 lichtbruin": {"18 as": 395},
         },
 
         "Altrifloor underlayment": {
@@ -948,9 +994,6 @@ PRIJZEN = {
     },
    
    "overig spul in winkel": {
-       
-      "Wielen": {
-      },
    },
 
     "Verf": {
