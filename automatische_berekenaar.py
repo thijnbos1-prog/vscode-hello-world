@@ -559,6 +559,93 @@ PRIJZEN = {
 
         },
 
+        "Rolmaten, mesjes, hamers etc": {
+            "Rolmaten": { 
+               
+            },
+            "mesjes": {
+               
+            },
+            "hamers en bijlen": {
+
+            },
+            "bits": {
+
+            },
+
+        },
+        "Boren": {
+            "SDS boor": {
+                "6mm": 4.5,
+                "6x260mm": 6,
+                "8mm": 4.5,
+                "10mm": 5.6,
+                "10x260mm": 6.5,
+                "12mm": 6.6,
+                "14mm": 8.65,
+                "14x300mm": 9,
+                "16x150": 9,
+                "18x200": 15,
+                "18x400": 15,
+                "40mm verlengd": 30,
+            },
+            "vlinderboor": {
+                "6, 8, 10, 12 of 13mm": 2.55,
+                "14, 16, 17, 18, 19 of 20mm": 2.8,
+                "22, 24 of 25mm": 3.3,
+                "28, 30 of 32mm": 3.55,
+                "35, 38 of 40mm": 4.3,
+                "6x400mm verlengd": 4.5,
+                "8/10/12x400mm verlengd": 5,
+                "18x400mm verlengd": 6,
+            },
+            "HSS boor blank": {
+                "1mm": 1,
+                "1,5mm": 1,
+                "2mm": 1.5,
+                "2,5mm": 1.5,
+                "3mm": 2.5,
+                "3,5mm": 2.8,
+                "4mm": 2.8,
+                "4,5mm": 3.05,
+                "5mm": 3.05,
+                "5,5mm": 3.55,
+                "6mm": 3.55,
+                "6,5mm": 3.55,
+                "7mm": 3.55,
+                "7,5mm": 6.1,
+                "8mm": 6.1,
+                "8mm lang": 9.15,
+                "9mm": 6.1,
+                "9,5mm": 6.1,
+                "10mm": 6.6,
+                "10mm lang 175mm": 9.5,
+                "HSS boorset": 27.5,
+                "Gatenboorset": 25,
+            },
+            "HSS bekistingsboor": {
+                "6x400mm": 10,
+                "8x400mm": 12.5,
+                "8x600mm": 15,
+                "10x400mm": 15,
+                "10x600mm": 18,
+                "12x400mm": 20,
+                "12x600mm": 22.5,
+                "14x400mm": 25,
+                "14x600mm": 27.5,
+                "16x400mm": 27.5,
+                "16x600mm": 30,
+                "6x460mm zeskant opname": 10,
+                "8x460mm zeskant opname": 12.5,
+            },
+            "Slangenboor": {
+
+            },
+            "Overige boren": {
+
+            },
+        }
+
     },
 
     "Kit en Pur": {
@@ -729,6 +816,7 @@ PRIJZEN = {
         },
 
         "Vuren": {
+            "22x45": {"geschaafd": 0.6},
 
             "45x45": {"geschaafd": 1.25},
 
@@ -860,8 +948,7 @@ PRIJZEN = {
     },
    
    "overig spul in winkel": {
-       "Rolmaten, mesjes etc": {
-       },
+       
       "Wielen": {
       },
    },
