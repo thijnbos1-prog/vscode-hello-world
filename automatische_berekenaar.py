@@ -730,11 +730,11 @@ PRIJZEN = {
 
         "Vuren": {
 
-            "45x95": {"geschaafd": 2.42},
+            "45x45": {"geschaafd": 1.25},
 
             "45x70": {"geschaafd": 1.78},
 
-            "45x45": {"geschaafd": 1.25},
+            "45x95": {"geschaafd": 2.42},
 
         },
 
