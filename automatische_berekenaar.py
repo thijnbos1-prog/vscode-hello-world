@@ -1351,7 +1351,7 @@ def controleer_prijzen(data, pad=None):
 
 
 def toon_resultaat(naam, regels, totaal, prijs_per_eenheid=None,
-                   eenheid="stuk", aantal=None):
+                   eenheid="stuk", aantal=None, prijs_per_m2=None):
 
    totaal_incl_btw = totaal
    totaal_excl_btw = totaal_incl_btw / (1 + BTW_PERCENTAGE)
@@ -1366,130 +1366,242 @@ def toon_resultaat(naam, regels, totaal, prijs_per_eenheid=None,
    print(f"{'TOTAAL excl. btw:':<18}{eur(totaal_excl_btw)}")
 
    WINKELMANDJE.append({
-       "naam": naam,
-       "regels": regels,
-       "incl_btw": totaal_incl_btw,
-       "excl_btw": totaal_excl_btw,
-       "prijs_per_eenheid": prijs_per_eenheid,
-       "eenheid": eenheid,
-       "aantal": aantal,
-   })
+    "naam": naam,
+    "regels": regels,
+    "incl_btw": totaal_incl_btw,
+    "excl_btw": totaal_excl_btw,
+    "prijs_per_eenheid": prijs_per_eenheid,
+    "prijs_per_m2": prijs_per_m2,
+    "eenheid": eenheid,
+    "aantal": aantal,
+})
 
 
 def toon_winkelmandje():
 
-   if not WINKELMANDJE:
+    if not WINKELMANDJE:
 
-       print("\nHet winkelmandje is leeg.")
+        print("\nHet winkelmandje is leeg.")
 
-       return
+        return
 
-   totaal_incl_btw = sum(item["incl_btw"] for item in WINKELMANDJE)
-   totaal_excl_btw = sum(item["excl_btw"] for item in WINKELMANDJE)
+    totaal_incl_btw = sum(
+        item["incl_btw"]
+        for item in WINKELMANDJE
+    )
 
-   print("\n" + "=" * 65)
-   print(" WINKELMANDJE")
-   print("=" * 65)
+    totaal_excl_btw = sum(
+        item["excl_btw"]
+        for item in WINKELMANDJE
+    )
 
-   for nummer, item in enumerate(WINKELMANDJE, start=1):
+    print("\n" + "=" * 65)
+    print(" WINKELMANDJE")
+    print("=" * 65)
 
-       print(f"\n{nummer}. {item['naam']}")
+    for nummer, item in enumerate(WINKELMANDJE, start=1):
 
-       if item["aantal"] is not None:
-           print(f"   Aantal: {item['aantal']}")
+        print(f"\n{nummer}. {item['naam']}")
 
-       if item["prijs_per_eenheid"] is not None:
-           print(
-               f"   Prijs per {item['eenheid']}: "
-               f"{eur(item['prijs_per_eenheid'])} incl. btw"
-           )
+        if item["aantal"] is not None:
 
-       print(f"   Totaal incl. btw: {eur(item['incl_btw'])}")
-       print(f"   Totaal excl. btw: {eur(item['excl_btw'])}")
+            print(
+                f"   Aantal: {item['aantal']}"
+            )
 
-   print("-" * 65)
-   print(f"{'TOTAAL incl. btw:':<35}{eur(totaal_incl_btw)}")
-   print(f"{'TOTAAL excl. btw:':<35}{eur(totaal_excl_btw)}")
+        if item["prijs_per_eenheid"] is not None:
 
-# =====================================================================
+            print(
+                f"   Prijs per {item['eenheid']}: "
+                f"{eur(item['prijs_per_eenheid'])} incl. btw"
+            )
 
-# REKENFUNCTIES PER TYPE
+        if item.get("prijs_per_m2") is not None:
 
-# =====================================================================
+            print(
+                f"   Prijs per m²: "
+                f"{eur(item['prijs_per_m2'])} incl. btw"
+            )
 
+        print(
+            f"   Totaal incl. btw: "
+            f"{eur(item['incl_btw'])}"
+        )
+
+        print(
+            f"   Totaal excl. btw: "
+            f"{eur(item['excl_btw'])}"
+        )
+
+    print("-" * 65)
+
+    print(
+        f"{'TOTAAL incl. btw:':<35}"
+        f"{eur(totaal_incl_btw)}"
+    )
+
+    print(
+        f"{'TOTAAL excl. btw:':<35}"
+        f"{eur(totaal_excl_btw)}"
+    )
+    
 def bereken_stuk(sleutel, naam):
 
-   """Soort -> Maat -> Aantal.  Totaal = stukprijs x aantal."""
+    """Soort -> Maat -> Aantal.
+    Totaal = stukprijs x aantal.
+    """
 
-   data = PRIJZEN[sleutel]
+    data = PRIJZEN[sleutel]
 
-   soort = kies_uit_lijst(f"Welke soort {naam.lower()}?", list(data.keys()))
+    soort = kies_uit_lijst(
+        f"Welke soort {naam.lower()}?",
+        list(data.keys())
+    )
 
-   maat = kies_uit_lijst("Welke maat?", list(data[soort].keys()))
+    maat = kies_uit_lijst(
+        "Welke maat of uitvoering?",
+        list(data[soort].keys())
+    )
 
-   prijs = controleer_prijs(
-       data[soort][maat],
-       f"{naam} - {soort} - {maat}"
-   )
+    prijs = controleer_prijs(
+        data[soort][maat],
+        f"{naam} - {soort} - {maat}"
+    )
 
-   aantal = vraag_getal("Aantal", is_geheel=True)
+    aantal = vraag_getal(
+        "Aantal",
+        is_geheel=True
+    )
 
-   totaal = prijs * aantal
+    totaal = prijs * aantal
 
-   toon_resultaat(naam, [
+    regels = [
 
-       ("Soort", soort),
+        ("Soort", soort),
 
-       ("Maat", maat),
+        ("Maat", maat),
 
-       ("Stukprijs", eur(prijs)),
+        ("Stukprijs", eur(prijs)),
 
-       ("Aantal", str(aantal)),
+        ("Aantal", str(aantal)),
 
-   ], totaal, prijs_per_eenheid=prijs, aantal=aantal)
+    ]
 
-   return totaal
+    toon_resultaat(
+        naam,
+        regels,
+        totaal,
+        prijs_per_eenheid=prijs,
+        eenheid="stuk",
+        aantal=aantal
+    )
+
+    return totaal
 
 def bereken_dikte(sleutel, naam):
 
-   """Soort -> Maat -> Dikte -> Aantal.  Totaal = stukprijs x aantal."""
+    """Soort -> Maat -> Dikte -> Aantal.
+    Totaal = stukprijs x aantal.
+    Voor Platen wordt ook de prijs per m² berekend.
+    """
 
-   data = PRIJZEN[sleutel]
+    data = PRIJZEN[sleutel]
 
-   soort = kies_uit_lijst(f"Welke soort {naam.lower()}?", list(data.keys()))
+    soort = kies_uit_lijst(
+        f"Welke soort {naam.lower()}?",
+        list(data.keys())
+    )
 
-   maat = kies_uit_lijst("Welke maat?", list(data[soort].keys()))
+    maat = kies_uit_lijst(
+        "Welke maat?",
+        list(data[soort].keys())
+    )
 
-   dikten = list(data[soort][maat].keys())
+    dikten = list(data[soort][maat].keys())
 
-   dikte = kies_uit_lijst("Welke dikte?", [f"{d} mm" for d in dikten])
+    dikte = kies_uit_lijst(
+        "Welke dikte?",
+        [f"{d} mm" for d in dikten]
+    )
 
-   dikte_key = dikte.replace(" mm", "")
+    dikte_key = dikte.replace(" mm", "")
 
-   prijs = controleer_prijs(
-       data[soort][maat][dikte_key],
-       f"{naam} - {soort} - {maat} - {dikte_key} mm"
-   )
+    prijs = controleer_prijs(
+        data[soort][maat][dikte_key],
+        f"{naam} - {soort} - {maat} - {dikte_key} mm"
+    )
 
-   aantal = vraag_getal("Aantal", is_geheel=True)
+    aantal = vraag_getal(
+        "Aantal",
+        is_geheel=True
+    )
 
-   totaal = prijs * aantal
+    totaal = prijs * aantal
 
-   toon_resultaat(naam, [
+    regels = [
 
-       ("Soort", soort),
+        ("Soort", soort),
 
-       ("Maat", maat),
+        ("Maat", maat),
 
-       ("Dikte", f"{dikte_key} mm"),
+        ("Dikte", f"{dikte_key} mm"),
 
-       ("Stukprijs", eur(prijs)),
+        ("Stukprijs", eur(prijs)),
 
-       ("Aantal", str(aantal)),
+        ("Aantal", str(aantal)),
 
-   ], totaal, prijs_per_eenheid=prijs, aantal=aantal)
+    ]
 
-   return totaal
+    # Alleen voor Platen:
+    # bereken ook de prijs per vierkante meter
+
+    prijs_per_m2 = None
+
+    if naam == "Platen":
+
+        try:
+
+            # Bijvoorbeeld:
+            # 122x244
+            # 125x250 zwart
+            # 122x244 blank
+
+            breedte, lengte = maat.split("x", 1)
+
+            breedte_m = float(
+                breedte.replace(",", ".")
+            ) / 100
+
+            lengte_m = float(
+                lengte.split()[0].replace(",", ".")
+            ) / 100
+
+            oppervlakte = breedte_m * lengte_m
+
+            prijs_per_m2 = prijs / oppervlakte
+
+            regels.append(
+                ("Prijs per m²", eur(prijs_per_m2))
+            )
+
+        except (ValueError, IndexError):
+
+            # Als de maat niet automatisch kan worden gelezen,
+            # wordt de berekening overgeslagen.
+
+            pass
+
+    toon_resultaat(
+        naam,
+        regels,
+        totaal,
+        prijs_per_eenheid=prijs,
+        eenheid="stuk",
+        aantal=aantal,
+        prijs_per_m2=prijs_per_m2
+    )
+
+    return totaal
 
 def bereken_meter(sleutel, naam):
 
@@ -1511,7 +1623,7 @@ def bereken_meter(sleutel, naam):
 
        melding = f"Deze houtsoort is alleen {afwerking}"
 
-       print(f"\\n{melding}")
+       print(f"\n{melding}")
 
    else:
 
