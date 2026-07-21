@@ -1574,6 +1574,22 @@ def bereken_stuk(sleutel, naam):
 
     return totaal
 
+
+def bereken_aparte_plaatmaat():
+
+    """Berekent alleen de oppervlakte van een plaat zonder prijs."""
+
+    print("\n--- Aparte plaatmaat ---")
+    print("Vul de afmetingen in centimeters in.")
+
+    breedte_cm = vraag_getal("Breedte (cm)")
+    lengte_cm = vraag_getal("Lengte (cm)")
+    oppervlakte = (breedte_cm / 100) * (lengte_cm / 100)
+
+    print(f"{'Maat:':<18}{breedte_cm:g}x{lengte_cm:g} cm")
+    print(f"{'Oppervlakte:':<18}{oppervlakte:.2f} m²")
+
+
 def bereken_dikte(sleutel, naam):
 
     """Soort -> Maat -> Dikte -> Aantal.
@@ -1583,10 +1599,19 @@ def bereken_dikte(sleutel, naam):
 
     data = PRIJZEN[sleutel]
 
+    soorten = list(data.keys())
+
+    if naam == "Platen":
+        soorten.append("Aparte maat invoeren (alleen m²)")
+
     soort = kies_uit_lijst(
         f"Welke soort {naam.lower()}?",
-        list(data.keys())
+        soorten
     )
+
+    if soort == "Aparte maat invoeren (alleen m²)":
+        bereken_aparte_plaatmaat()
+        return None
 
     maat = kies_uit_lijst(
         "Welke maat?",
