@@ -904,19 +904,12 @@ PRIJZEN = {
             "215x400 lichtbruin": {"18 as": 395},
         },
 
-        "Altrifloor underlayment": {
+        "underlayment": {
 
             "2440x1220": {"6": 18.50, "9": 24.90},
 
-        },
 
-        "Sudati underlayment": {
-
-            "2440x1220": {"6": 17.90, "9": 23.50},
-
-        },
-
-        "Meranti multiplex": {
+        "Meranti": {
 
             "2500x1220": {"12": 35.00, "18": 48.50},
 
