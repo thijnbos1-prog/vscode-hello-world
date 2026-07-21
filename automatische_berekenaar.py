@@ -906,7 +906,7 @@ PRIJZEN = {
 
         "underlayment": {
             "61x244": {"18 Altrifloor": 29},
-            "122x244": {"9": 17.5, "18 sudati": 35, "18  Altrifloor"},
+            "122x244": {"9": 17.5, "18 sudati": 35, "18  Altrifloor": 45},
 
         "Meranti": {
 
