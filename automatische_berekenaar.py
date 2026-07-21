@@ -548,7 +548,29 @@ PRIJZEN = {
         },
 
         "Plankendragers": {
+            "Wit hoek": {
+                "100x150": 3.56,
+                "150x200": 4.56,
+                "200x250": 5.58,
+                "200x300": 6.09,
+            },
+            "zwart steun": {
+                "160x105": 5,
+                "235x160": 7.5,
+            },
+            "zwart design": {
+                "140x140": 3.7,
+                "190x190": 4,
+                "240x240": 4.5,
+            },
+            "Elementdrager wit enkel": {
+                "20cm": 1.75,
+                "30cm": 2.05,
+                "40cm": 2.5,
+            },
+            "Elementdrager zwart enkel": {
 
+            },
         },
 
         "Raveeldragers en hoekijzers": {
