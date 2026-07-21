@@ -551,12 +551,22 @@ PRIJZEN = {
 
         },
 
-        "Raveeldragers": {
-
-        },
-
-        "hoekijzers": {
-
+        "Raveeldragers en hoekijzers": {
+            "Raveeldragers": {
+                "Licht": 1,
+                "zwaar": 3.25,
+                "met lip": 3.5,
+                "Ruitersteunen": 2,
+            },
+            "hoekijzers": {
+                "40x40": 0.45,
+                "40x60": 0.6,
+                "40x80": 1,
+                "50x50": 0.7,
+                "90x90": 1.20,
+                "120x120": 1.75,
+                "150x150": 2.2,
+            }
         },
 
         "Rolmaten, mesjes, hamers etc": {
@@ -593,6 +603,14 @@ PRIJZEN = {
                 "600x120mm staal": 57.5,
                 "600x120mm gegoten kop": 42.5,
             },
+            "Draadeind": {
+                "M6/M8": 1.8,
+                "M10": 2.05,
+                "M12": 3,
+                "M14": 4,
+                "M16": 4.75,
+                "M20": 7.5,
+            }
 
         },
         "Boren": {
@@ -831,13 +849,22 @@ PRIJZEN = {
         },
 
         "Douglas": {
-
-            "22x50": {"Ongeschaafd": 1.45, "Geschaafd": 1.85},
-
-            "28x70": {"Ongeschaafd": 2.10},
-
-            "45x145": {"Ongeschaafd": 5.60},
-
+            "20x175 v-delen": {"blank": 3.9, "zwart": 4.5},
+            "potdeksel": {"blank": 3.25, "zwart": 4.25},
+            "Rhombus triple profiel": {"blank": 3.45, "zwart": 4.75},
+            "18x145": {"geschaafd": 2.65},
+            "18x195": {"geschaafd": 3.5},
+            "28x145": {"geschaafd": 3.25, "antislip": 4.15},
+            "28x195": {"geschaafd": 5.85},
+            "28x295": {"geschaafd": 8},
+            "40x68": {"geschaafd": 2.5},
+            "50x70": {"ruw": 2.2},
+            "45x95/50x100": {"geschaafd": 3.5, "ruw": 3.2},
+            "45x145/50x150": {"geschaafd": 5.25, "ruw": 4.75},
+            "95x95/100x100": {"geschaafd": 8, "ruw": 7},
+            "120x120": {"geschaafd": 12.5, "ruw": 9.75},
+            "145x145/150x150": {"geschaafd": 17.7, "ruw": 14.55},
+            "190x190/200x200": {"geschaafd": 31, "ruw": 31.45},
         },
 
         "Geïmpregneerd": {
