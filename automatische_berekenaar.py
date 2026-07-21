@@ -538,11 +538,21 @@ PRIJZEN = {
             },
 
             "Kogellagerscharnier": {
-
+                "76x76": 6,
+                "76x76 RVS": 6.5,
+                "76x76 zwart": 8.5,
+                "89x89": 6.5,
+                "89x89 RVS DX": 7.5,
+                "89x89 RVS": 14.5,
+                "89x89 zwart": 9,
             },
 
             "kogellagerscharnier met klauw": {
-
+                "76x76": 8.5,
+                "76x76 RVS DX": 7.5,
+                "89x89": 7.5,
+                "89x89 RVS DX": 8,
+                "89x89 zwart": 9,
             },
 
         },
@@ -567,9 +577,15 @@ PRIJZEN = {
                 "20cm": 1.75,
                 "30cm": 2.05,
                 "40cm": 2.5,
+                "50cm": 4.5,
+                "60cm": 6,
             },
             "Elementdrager zwart enkel": {
-
+                "20cm": 1.95,
+                "30cm": 2.05,
+                "40cm": 2.5,
+                "50cm": 4.25,
+                "60cm": 6.25,
             },
         },
 
@@ -722,6 +738,17 @@ PRIJZEN = {
             },
         }, 
         "Wielen": {
+            "Wielen met rem": {
+                "50mm Zwenkwiel": 9.5,
+                "100mm Zwenkwiel": 13.5,
+                "150mm Zwenkwiel": 15,
+            },
+            "Wielen zonder rem": {
+                "50mm Zwenkwiel": 8.5,
+                "50mm Bokwiel": 5.75,
+                "100mm Zwenkwiel": 12.5,
+                "150mm Zwenkwiel": 12.5,
+            },
         },
         
 
